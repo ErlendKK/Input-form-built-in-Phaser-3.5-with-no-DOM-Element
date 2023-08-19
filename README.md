@@ -1,6 +1,6 @@
 # Input-form-with-Phaser-3.5-No-DOM-Elements-
 
-An input form built entirely with the Phaser 3.5 toolkit with no DOM overlay.
+An input form built entirely with the Phaser 3.5 toolkit with no DOM Element.
 
 Licensed under the MIT License, Copyright (c) 2023 Erlend Kulander Kvitrud.
 
