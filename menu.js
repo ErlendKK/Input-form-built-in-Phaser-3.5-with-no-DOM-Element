@@ -89,10 +89,8 @@ class Menu extends Phaser.Scene {
 
                 if (!gameState.isEnteringName) { 
 
-                    // isEnteringName is used to turn on and off the recording of key strokes, and 
-                    // activate/ deactivate the cursor. 
+                    // isEnteringName is used to turn on and off the recording of key strokes.
                     gameState.isEnteringName = true;
-                    console.log('isEnteringName has been activated');
 
                     // Reset name form
                     if (gameState.name === 'Enter your name...') {
@@ -133,7 +131,6 @@ class Menu extends Phaser.Scene {
                     // Deactivates typing
                     self.time.delayedCall(delayTime, () => {
                         gameState.isEnteringName = false;
-                        console.log('isEnteringName has been deactivated');
                     })
 
                     // Remove cursor
