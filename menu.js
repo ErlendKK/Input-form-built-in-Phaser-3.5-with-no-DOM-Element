@@ -103,7 +103,9 @@ class Menu extends Phaser.Scene {
 
                     // Activate the on-screen keyboard for mobile devices
                     if (isMobileDevice()) {
-                        gameState.hiddenInput.focus();
+                        gameState.hiddenInput.addEventListener('focus', function() {
+                            gameState.hiddenInput.scrollIntoView({ behavior: 'smooth' });
+                        });
                     }
                     
                     // deactivateNameForm() must be called after a short delay to ensure that the pointerup  
