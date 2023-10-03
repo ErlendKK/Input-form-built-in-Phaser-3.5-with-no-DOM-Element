@@ -80,6 +80,11 @@ class Menu extends Phaser.Scene {
             gameState.hiddenInput.addEventListener('input', function(event) {
                 gameState.name = event.target.value;
             });
+
+            gameState.hiddenInput.addEventListener('focus', function() {
+                gameState.hiddenInput.scrollIntoView({ behavior: 'smooth' });
+            });
+            
         };
 
         
@@ -103,9 +108,7 @@ class Menu extends Phaser.Scene {
 
                     // Activate the on-screen keyboard for mobile devices
                     if (isMobileDevice()) {
-                        gameState.hiddenInput.addEventListener('focus', function() {
-                            gameState.hiddenInput.scrollIntoView({ behavior: 'smooth' });
-                        });
+                        gameState.hiddenInput.focus();
                     }
                     
                     // deactivateNameForm() must be called after a short delay to ensure that the pointerup  
