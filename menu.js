@@ -81,9 +81,9 @@ class Menu extends Phaser.Scene {
                 gameState.name = event.target.value;
             });
 
-            gameState.hiddenInput.addEventListener('focus', function() {
-                gameState.hiddenInput.scrollIntoView({ behavior: 'smooth' });
-            });
+            // gameState.hiddenInput.addEventListener('focus', function() {
+            //     gameState.hiddenInput.scrollIntoView({ behavior: 'smooth' });
+            // });
             
         };
 
