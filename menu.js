@@ -71,13 +71,13 @@ class Menu extends Phaser.Scene {
         };
 
         if (isMobileDevice()) {
-            const hiddenInput = document.createElement('input');
-            hiddenInput.style.position = 'absolute';
-            hiddenInput.style.opacity = '0';
-            hiddenInput.style.zIndex = '-1';
-            document.body.appendChild(hiddenInput);
+            gameState.hiddenInput = document.createElement('input');
+            gameState.hiddenInput.style.position = 'absolute';
+            gameState.hiddenInput.style.opacity = '0';
+            gameState.hiddenInput.style.zIndex = '-1';
+            document.body.appendChild(gameState.hiddenInput);
 
-            hiddenInput.addEventListener('input', function(event) {
+            gameState.hiddenInput.addEventListener('input', function(event) {
                 gameState.name = event.target.value;
             });
         };
@@ -103,7 +103,7 @@ class Menu extends Phaser.Scene {
 
                     // Activate the on-screen keyboard for mobile devices
                     if (isMobileDevice()) {
-                        hiddenInput.focus();
+                        gameState.hiddenInput.focus();
                     }
                     
                     // deactivateNameForm() must be called after a short delay to ensure that the pointerup  
@@ -139,7 +139,7 @@ class Menu extends Phaser.Scene {
 
                     // Deactivate the on-screen keyboard for mobile devices
                     if (isMobileDevice()) {
-                        hiddenInput.focus();
+                        gameState.hiddenInput.blur();
                     }
                 }
             });
